@@ -28,7 +28,7 @@ window.StockTicker = (function () {
 	};
 
 	var nextTick = function () {
-		var symbol = _.sample(stockValues);
+		var symbol = _.sample(symbols);
 		var start = stockValues[symbol];
 		var change = _.sample(stockChanges);
 		var end = stockValues[symbol] = start + change;
