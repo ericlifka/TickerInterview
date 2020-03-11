@@ -20,7 +20,7 @@ window.StockTicker = (function () {
 	var listenerContext;
 
 	var randomTickTime = function () {
-		return _.random(100, 1000);
+		return _.random(1000, 5000);
 	};
 
 	var randomSymbol = function () {
