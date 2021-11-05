@@ -5,8 +5,14 @@
 		<link href="styles.css" rel="stylesheet" type="text/css" media="all">
 	</head>
 	<body>
+		<div id="stock-list">
+			<h1>Stock Ticker</h1>
+			<stock-list :stocks="stockList" />
+		</div>
+
+		<script src="https://unpkg.com/vue@next"></script>
 		<script src="http://underscorejs.org/underscore.js"></script>
 		<script src="ticker.js"></script>
-		<script src="solution.js"></script>
+		<script src="solution.js" type="module"></script>
 	</body>
 </html>
