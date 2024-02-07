@@ -39,9 +39,11 @@ window.StockTicker = (function () {
 			symbol: symbol,
 			start: start,
 			change: change,
-			end: end
+			end: end,
+			timestamp : Date.now()
 		};
 		var list = document.getElementById("Stock-list")
+		if(list)
 		listenerFunction.call(listenerContext, description, list, stocksToDisplay);
 		window.setTimeout(nextTick, randomTickTime());
 	};
