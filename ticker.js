@@ -13,6 +13,9 @@ window.StockTicker = (function () {
 		'DOW J': 16296,
 		'NASDAQ': 4296
 	};
+	var stocksToDisplay = {
+
+	}
 	var symbols = _.keys(stockValues);
 	var stockChanges = _.range(-25, 30, 5);
 
@@ -38,8 +41,8 @@ window.StockTicker = (function () {
 			change: change,
 			end: end
 		};
-		listenerFunction.call(listenerContext, description);
-
+		var list = document.getElementById("Stock-list")
+		listenerFunction.call(listenerContext, description, list, stocksToDisplay);
 		window.setTimeout(nextTick, randomTickTime());
 	};
 

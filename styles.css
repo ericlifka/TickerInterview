@@ -3,3 +3,48 @@ body, html {
     padding: 0;
     font-family: sans-serif;
 }
+
+.card {
+    margin-top: 2rem;
+}
+.card .card-title {
+    font-weight: 300;
+}
+.card .market-info .card-text {
+    font-weight: 400;
+}
+.card .market-info .stock-info
+{
+    display: block;
+    float: left;
+    padding: 0 1em;
+    text-align: right;
+}
+.card .market-info .up {
+    color: green;
+}
+.card .market-info .down {
+    color: red;
+}
+.card .market-info .stock-info
+{
+    display: block;
+    float: left;
+    padding: 0 10px;/*Change HERE*/
+    text-align: right;
+}
+.card .market-info{
+  display:flex;
+  flex-wrap:wrap; 
+  align-items:center;
+  justify-content:space-between;
+}
+.card .market-info p{
+    margin:0;
+}
+
+.card-body {
+    max-width: 50% !important;
+    border:1px solid black;
+}
+
