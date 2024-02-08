@@ -3,3 +3,117 @@ body, html {
     padding: 0;
     font-family: sans-serif;
 }
+.stockHeader{
+    margin-left: 40%;
+}
+.card {
+    margin-top: 2rem;
+    
+}
+.card .card-title {
+    font-weight: 300;
+}
+.card .market-info .card-text {
+    font-weight: 400;
+}
+.card .market-info .stock-info
+{
+    display: block;
+    float: left;
+    padding: 0 1em;
+    text-align: right;
+}
+/* .card .market-info .up {
+    color: green;
+}
+.card .market-info .down {
+    color: red;
+} */
+.card .market-info .stock-info
+{
+    display: block;
+    float: left;
+    padding: 0 10px;/*Change HERE*/
+    text-align: right;
+}
+.card .market-info{
+  display:flex;
+  flex-wrap:wrap; 
+  align-items:center;
+  justify-content:space-between;
+}
+.card .market-info{
+    padding: auto;
+    height: 50px;
+}
+.card .market-info p{
+    margin:0;
+    color: white;
+    font-family: 'Noto Sans', 'sans-serif';
+}
+
+.card-body {
+    max-width: 50% !important;
+    border:1px solid black;
+    border-radius: 10px;
+    background-color: rgba(245, 245, 220, 0.346);
+}
+
+.card-body:has(.up){
+    /* animation: flashGreenBackground 2s infinite; */
+    background-color: green;
+    box-shadow: 10px 10px rgb(155, 214, 155);  
+    
+}
+
+.card-body:has(.down){
+    /* animation: flashRedBackground 2s infinite; */
+    background-color: red;
+        box-shadow: 10px 10px rgb(223, 146, 118)
+}
+
+.first:has(.up){
+    animation: flashGreenBackground 2s infinite;
+}
+
+.first:has(.down){
+    animation: flashRedBackground 2s infinite;
+}
+
+
+@keyframes flashGreenBackground {
+    /* from {background-color: rgba(74, 130, 91, 0.778);}  */
+    50%, 100% {background-color: rgb(81, 208, 81);
+        box-shadow: 10px 10px rgb(155, 214, 155);    
+    }
+}
+
+@keyframes flashRedBackground {
+    /* from {background-color: rgba(245, 245, 220, 0.778);} */
+    to {background-color: rgb(255, 157, 76);
+        box-shadow: 10px 10px rgb(223, 146, 118);
+    }
+
+}
+
+ul{
+    list-style-type: none;
+}
+
+.stock-card .symbol{
+    color: white;
+    border-bottom: 2px solid black;
+    padding-bottom: 2%;
+    padding-left: 10%;
+    height: 5vh;
+    font-family: 'Noto Sans', 'sans-serif';
+    font-size: x-large;
+}
+
+.modal-lg{
+    margin: 0 25% 0 25%;
+    width: 75%;
+    padding: 10px;
+}
+
+
