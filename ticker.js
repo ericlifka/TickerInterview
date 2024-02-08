@@ -14,7 +14,7 @@ window.StockTicker = (function () {
 		'NASDAQ': 4296
 	};
 	var stocksToDisplay = {
-
+		
 	}
 	var symbols = _.keys(stockValues);
 	var stockChanges = _.range(-25, 30, 5);
@@ -42,9 +42,12 @@ window.StockTicker = (function () {
 			end: end,
 			timestamp : Date.now()
 		};
+		//Fetch the UL HTML List to append tick
 		var list = document.getElementById("Stock-list")
+
+		//Wait for list to fetch before tick generates to avoid null error
 		if(list)
-		listenerFunction.call(listenerContext, description, list, stocksToDisplay);
+		listenerFunction.call(listenerContext, description, list, stocksToDisplay);  //Function Borrowing
 		window.setTimeout(nextTick, randomTickTime());
 	};
 
